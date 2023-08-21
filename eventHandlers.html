@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handlers</title>
+    <script src="assets/jquery-3.6.1.js"></script>
+</head>
+
+<body onload="alert('The page is loading')">
+
+
+
+    <h1>Event Handlers</h1>
+    <button onclick="this.innerHTML=Date()">On Click Event</button> <br><br>
+
+    <span>onmouseover & onmouseout Events</span>
+    <input type="text" onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='#fff'">
+
+    <br><br>
+    <span>Alert shows when the key is pressed at this button</span>
+    <button onkeydown="alert('ON KEY DOWN')">onkeydown Event</button>
+
+    <br><br>
+    <span>Alert shows when the key is released at this button</span>
+    <button onkeyup="alert('ON KEY UP')">onkeyup Event</button>
+    
+    <br><br>
+    <span>onblur & onfocus events applied</span>
+    <input type="text" id="myInput" onblur="myblur()" onfocus="myfocus()">
+
+    <h3>focusin and focusout</h3>
+    <button type="button" id="myb">Button</button>
+
+    <h3>Change Event </h3><span>changes text from lowercase to uppercase</span>
+    <input type="text" id="fname">
+    <h3>Change Event </h3><span>changes text from uppercase to lowercase</span>
+    <input type="text" id="lname">
+
+    <br><br>
+
+    <h3>Change Event on select element </h3>
+    <select id="skills" onchange="mySkills()">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Django">Django</option>
+    </select>
+    <span id="contentselect" style="color:red;">Selected Item will be shown here</span>
+
+
+
+    
+
+
+    <br><br><br><br>
+    <script>
+
+
+        function myblur(){
+            document.getElementById("myInput").style.background="lightgray";
+        }
+
+        function myfocus(){
+            document.getElementById("myInput").style.background="lightblue";
+        }
+
+        //onblur and onfocus with eventlistener and same works to focusin and focusout
+        let x = document.getElementById("myb");
+        x.addEventListener("focusin", myFocusFunc);
+        x.addEventListener("focusout", myBlurFunc);
+
+        function myFocusFunc(){
+            x.style.background="red";
+        }
+
+        function myBlurFunc(){
+            x.style.background="blue";
+        }
+
+        //change event using event listener
+        document.getElementById("fname").addEventListener("change", textchge);
+        function textchge(){
+            let a = document.getElementById("fname");
+            a.value = a.value.toUpperCase();
+        }
+
+        //change event using javascript without eventlistener
+        document.getElementById("lname").onchange = function(){lowername()};
+        function lowername(){
+            let b = document.getElementById("lname");
+            b.value = b.value.toLowerCase();
+        }
+
+        //change event on select element
+        function mySkills(){
+            let s = document.getElementById("skills").value;
+            console.log(s);
+            document.getElementById("contentselect").innerHTML ="You Selected : "+ s;
+        }
+
+    </script>
+
+    
+
+    <!-- JQuery Scripts practice -->
+    <script>
+
+    </script>
+</body>
+</html>

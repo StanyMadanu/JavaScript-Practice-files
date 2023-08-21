@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing array in Objects</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    
+    <script>
+        let x = "";
+        const myObj = {
+            name :"John",
+            age: 30,
+            cars : [
+                {name:"Ford", model:["Fiesta", "Focus", "Mustang"]},
+                {name:"BMW", model:["320", "X3", "X5"]},
+                {name:"Fiat", model:["500", "Panda"]}
+            ]
+        }
+
+        for (let i in myObj.cars){
+            x += "<h2>" + myObj.cars[i].name + "</h2>";
+            for (let j in myObj.cars[i].model){
+                x += myObj.cars[i].model[j] + "<br>";
+            }
+        }
+
+        document.getElementById("demo").innerHTML = x;
+
+
+    </script>
+    
+</body>
+</html>

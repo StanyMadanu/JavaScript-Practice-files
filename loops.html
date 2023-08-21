@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+    
+
+
+
+    <!-- internal Javascript -->
+    <script>
+
+        var day = new Date().getDay();
+        let dayy;
+
+        switch(day){
+            case 0:
+                dayy = "Sunday";
+                break;
+            case 1:
+                dayy = "Monday";
+                break;
+            case 2:
+                dayy = "Tuesday";
+                break;
+            case 3:
+                dayy = "Wednesday";
+                break;
+            case 4:
+                dayy = "Thursday";
+                break;
+            case 5:
+                dayy = "Friday";
+                break;
+            case 6:
+                dayy = "Saturday";
+                
+        }
+
+        document.getElementById("demo").innerHTML = "Hey! its " + dayy + " bro 😎";
+
+
+        //default case
+
+        let text;
+        switch(new Date().getDay()){
+            case 0:
+                text = "Today is Sunday";
+                break;
+            case 6:
+                text = "Today is Saturday";
+                break;
+            default:
+                text = "Looking forward to the Weekend!"
+        }
+
+        document.write(text);
+
+
+        //same code in double case blocks then use this
+
+        switch (new Date().getDay()) {
+            case 4:
+            case 5:
+              text = "Soon it is Weekend";
+              break;
+            case 0:
+            case 6:
+              text = "It is Weekend";
+              break;
+            default:
+              text = "Looking forward to the Weekend";
+        }
+
+        console.log(text);
+
+
+
+        //for loop
+        const num = [1, 2, 3, 4, 5];
+
+        for(let i = 0; i <num.length; i++ ){
+            console.log(num[i]);
+        }
+
+        //for in
+        const a = {car:"audi", bus:"loa", bike:"gt"};
+        
+        for(let b in a){
+            console.log(a[b]);
+        }
+
+
+        /* for loop iteration */
+        document.write("<h1 style='color:Orange;'> For Loop Iteration</h1>");
+        for(var i=1; i<=5; i++){
+            document.write("Hello World! <br>");
+        }
+
+        // for loop number table example
+        document.write("<h3 style='color:blue;'>Number Table <span style='font-size:13px; color:red;'>using for loop</span></h3>");
+
+            for(var i=1; i<=10; i++){
+                document.write(5, " x ", i, " = ", 5*i, "<br>");
+            }
+
+        // for loop reverse number table example
+        document.write("<h3 style='color:blue;'>Number Table in Reverse Order <span style='font-size:13px; color:red;'>using for loop</span></h3>");
+            for(var i=10; i>=1; i--){
+                document.write(5, " x ", i, " = ", 5*i, "<br>");
+            }
+
+        //while loop iteration
+        document.write("<h1 style='color:Orange;'> While Loop Iteration</h1>");
+        
+        var i = 1;
+        while(i<=5){
+            document.write("Hello World <br>");
+            i++;
+        }
+
+        //while loop number table example
+        document.write("<h3 style='color:blue;'>Number Table <span style='font-size:13px; color:red;'>using while loop</span></h3>");
+        var i = 1;
+        while(i<=10){
+            document.write(6, " x ", i, " = ", 6*i, "<br>");
+            i++;
+        }
+
+        // while loop reverse number table example
+        document.write("<h3 style='color:blue;'>Number Table in Reverse Order <span style='font-size:13px; color:red;'>using while loop</span></h3>");
+        var i=10;
+        while(i>=1){
+            document.write(6, " x ", i, " = ", 6*i, "<br>");
+            i--;
+        }
+
+        // while loop some of digits
+        document.write("<h3 style='color:blue;'>Some of digits for given number<span style='font-size:13px; color:red;'>using while loop</span></h3>");
+        var numm = 897493;
+        var lastDigit = 0;
+        var sumOfAllDigits = 0;
+
+        while(numm!=0){
+            lastDigit = numm % 10; //1
+            sumOfAllDigits = sumOfAllDigits + lastDigit; //2+1= 3
+            numm = parseInt(numm / 10); //0
+        }
+        
+        document.write("Sum of All Digits is = ", sumOfAllDigits);
+
+
+         // do while loop
+         document.write("<h1 style='color:blue;'>do while loop</h1>");
+        i = 5;
+        do{
+            document.write("Hello World! <br>");
+            i++;
+        }while(i<=5);
+
+        //for in loop
+        document.write("<h1 style='color:blue;'>Programmer defined object</h1>");
+        var car = {model:"maruthi", color:"red", number:2};
+        for(var variable in car){
+            document.write(variable, " : ", car[variable], "<br>");
+        }
+
+        //Array example
+        document.write("<h3 style='color:blue;'>Checking the numbers inside the array with the given number</h3>");
+        
+        var arr = [10, 20, 30, 40, 50, 60];
+        var error = false;
+        var gnumber = 1;
+
+        for(var i=0; i<arr.length; i++){
+
+            if(arr[i]==gnumber){
+                error = true;
+                break;
+            }
+
+        }
+        document.write(error);
+
+
+        //nested for loops
+        document.write("<h3 style='color:blue;'>Nested for loop</h3>");
+
+        let rows = 5;
+        
+        for(var i=5; i<=rows;){
+
+            for(var k=1; k<=(rows-i); k++){
+                document.write("&nbsp;");
+            } 
+            for(var j=1; j<=i; j++){
+                document.write("* ");
+                
+            }
+
+            i--;
+            if(i == 0){
+                break;
+            }
+            document.write("<br>");
+        }
+
+        
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="myScript.js"></script>
+</body>
+</html>

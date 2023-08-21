@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Recursive behaviour with functions</title>
+    </head>
+    <body>
+
+        <script>
+
+            function fact(n)
+            {
+                if(n==1)
+                    return 1;
+                else
+                    return n * fact(n-1);
+            }
+
+            var rValue = fact(3);
+            document.write(rValue);
+        </script>
+    </body>
+</html>

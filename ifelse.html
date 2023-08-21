@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        /* if else statement to find even and odd numbers*/
+        var a = 7;
+        if(a%2 == 0){
+            document.write(a," is even number");
+        }else{
+            document.write(a, " is odd number");
+        }
+
+        //condition statements to find even and odd numbers
+       /*  var num = 3;
+        var result = (num%2==0)? " is even number" : " is odd number" ;
+        document.write(num, result) */;
+
+
+        //----------------------------------------------------
+        //else if ladder to find student grades
+        document.write("<br><br>","Student Grades", "<br>");
+        var marks = 89;
+        if((marks>=0) && (marks<30)){
+            document.write("Fail");
+        }else if((marks>=30) && (marks<50)){
+            document.write("C Grade");
+        }else if((marks>=50) && (marks<70)){
+            document.write("B Grade");
+        }else if((marks>=70) && (marks<90)){
+            document.write("A Grade");
+        }else if((marks>=90) && (marks<=100)){
+            document.write("A+ Grade");
+        }else{
+            document.write("Invalid Marks!");
+        }
+
+
+        //----------------------------------------------------
+        //switch case
+        document.write("<br><br>","Student Subjects", "<br>");
+        var subject = "english";
+        switch(subject){
+            case "maths":
+                document.write("Maths is a subject");
+                break;
+            case "science":
+                document.write("Science is a subject");
+                break;
+            case "social":
+                document.write("Social is a subject");
+                break;
+            case "english":
+                document.write("English is a subject");
+                break;
+            case "telugu":
+                document.write("Telugu is a subject");
+                break;
+            case "hindi":
+                document.write("Hindi is a subject");
+                break;
+            default:
+                document.write("Invalid Entry!");
+        }
+    </script>
+</body>
+</html>

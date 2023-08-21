@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    
+    <script>
+
+        // function without arguments and without return 
+        function sayHi(){
+            document.write("Hi <br>");
+        }
+        sayHi();
+
+        //function without arguments and with return
+        function sayHello(){
+            return "Hello";
+        }
+
+        document.write(sayHello(), "<br>");
+
+        //function with arguments and without return
+        function greet(wish){
+            document.write(wish);
+        }
+        greet("good morning <br>");
+
+        //function with arguments and return 
+        function add(num1, num2){
+            return num1 + num2;
+        }
+
+        document.write("num1 + num2: ", add(3,4), "<br>");
+
+        // function expression
+        var add = function(num3, num4){
+            return num3 + num4;
+        }
+
+        document.write(add(5,5), "<br>");
+
+        // function constructor
+
+        var sumof2num = new Function("num6", "num7", "{\
+            return num6 + num7\
+        }");
+        document.write(sumof2num(4,8));
+    </script>
+</body>
+</html>

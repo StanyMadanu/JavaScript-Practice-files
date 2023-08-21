@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LARABICS Operators</title>
+</head>
+<body>
+    
+    <h1>Arithmetic Operators( + , - , * , / , ++ , -- , % )<span style="font-size: 15px; background-color: blue; color:white;"> values a = 10, b = 20</span></h1>
+    
+
+    <h4>Addition c = a + b</h4>
+    <div id="Add"></div>
+
+    <h4>Subtraction c = a - b</h4>
+    <div id="Sub"></div>
+
+    <h4>Multiplication c = a * b</h4>
+    <div id="Mul"></div>
+
+    <h4>Division c = a / b</h4>
+    <div id="div"></div>
+
+    <h4>Pre-Increment a = ++a</h4>
+    <div id="incre"></div>
+
+    <h4>Pre-Decrement b = --b</h4>
+    <div id="decre"></div>
+
+    <h4>Modulas a = 5, b=10, d = a % b</h4>
+    <div id="Modulas"></div>
+
+    <h1>Logical Operators</h1>
+    <b>Logical && and Operator</b>
+    <div id="andop"></div>
+    <div id="andop1"></div>
+    <div id="andop2"></div>
+    <div id="andop3"></div>
+
+    <b>Logical || or Operator</b>
+    <div id="piop"></div>
+    <div id="piop1"></div>
+    <div id="piop2"></div>
+    <div id="piop3"></div>
+
+    <b>Logical ! not Operator</b>
+    <div id="notop"></div>
+    <div id="notop1"></div>
+
+    <h1>Conditional Operator</h1>
+    <div id="conditional"></div>
+
+    <h1>Assignment Operators with shorthand Arithmetic operators</h1><span style="background-color:black; color:white;"> +=, -=, /=, *=, %= </span>
+    <div id="shorth"></div>
+    <div id="shorth1"></div>
+    <div id="shorth2"></div>
+    <div id="shorth3"></div>
+    <div id="shorth4"></div>
+    <div id="shorth5"></div>
+
+    <h1>Increment and Decrement Operators</h1>
+    <div id="postinc"></div>
+    <div id="preinc"></div>
+    <div id="postdec"></div>
+    <div id="predec"></div>
+
+    <h1>Bitwise Operators</h1><span>&, |, ^, <<, >></span>
+    <div id="bit1"></div>
+    <div id="bit2"></div>
+    <div id="bit3"></div>
+    <div id="bit4"></div>
+    <div id="bit5"></div>
+
+    <h1>new & delete Operator</h1>
+    <div id="carObj"></div>
+    <div id="carObj1"></div>
+
+
+    <br><br><br>
+    <script>
+        
+        //Bitwise Operators
+        document.getElementById("bit1").innerHTML = 1 & 1;
+        document.getElementById("bit2").innerHTML = 0 | 0;
+        document.getElementById("bit3").innerHTML = 1 ^ 5;
+        document.getElementById("bit4").innerHTML = 5 << 5;
+        document.getElementById("bit5").innerHTML = 1 >> 2;
+        
+
+        //Arithmetic Operators( + , - , * , / , ++ , -- , % ) 
+       
+        var a = 10;
+        var b = 20;
+        var c = a + b;
+        document.getElementById("Add").innerHTML=c;
+
+        var c = a - b;
+        document.getElementById("Sub").innerHTML=c;
+        
+        var c = a * b;
+        document.getElementById("Mul").innerHTML=c;
+
+        var c = a / b;
+        document.getElementById("div").innerHTML=c;
+
+        var a = ++a;
+        document.getElementById("incre").innerHTML=a;
+    
+        var b = --b;
+        document.getElementById("decre").innerHTML=b;
+
+        var a=5, b=10;
+        var d = a % b;
+        document.getElementById("Modulas").innerHTML=d;
+
+
+    /* document.write("Arithmetic Operators");
+        document.write("<br>");
+        document.write(2 + 2);
+        document.write("<br>");
+        document.write(6 - 3);
+        document.write("<br>");
+        document.write(5*10);
+        document.write("<br>");
+        document.write(10/5);
+        document.write("<br>");
+        document.write(10%5);
+        document.write("<br>");
+        document.write(10/0);
+        document.write("<br>");
+
+        //to display last digit of the given number
+        document.write(213433343%10);
+        document.write("<br>");
+
+        //to display all digits except last digit of the given number
+        document.write(parseInt(33298743/10));
+        document.write("<br>");
+ */
+
+        //Logical && Operator
+        document.getElementById("andop").innerHTML = (3<4) && (4<5); // T T = True
+        document.getElementById("andop1").innerHTML = (4<3) && (3<5); // F T = False
+        document.getElementById("andop2").innerHTML = (9>2) && (7>9); // T F = False
+        document.getElementById("andop3").innerHTML = (5>5) && (7<9); // F F = False
+
+        //Logical || Operator
+        document.getElementById("piop").innerHTML = (3<4) || (4<5); // T T = True
+        document.getElementById("piop1").innerHTML = (5>6) || (6>5); // F T = True
+        document.getElementById("piop2").innerHTML = (8<9) || (10<9); // T F = True
+        document.getElementById("piop3").innerHTML = (6<6) || (5>10); // F F = False
+
+        //logical ! or operator
+        document.getElementById("notop").innerHTML = !(3<4); // False
+        document.getElementById("notop1").innerHTML = !("Hello" == "Hell"); // True
+
+        //conditional operator
+        var num = 23;
+        var result = ((num%2)==0)? "even" : "odd";
+        document.getElementById("conditional").innerHTML = num + " is " + result + "  number";
+
+        /*
+        conditional operator using if else statements
+
+        var number = 2739487;
+        var result;
+        if((number%2)==0){
+            result = "Even Number roye";
+        }else{
+            result = "Odd Number roye";
+        }
+        document.write(number, " is ", result, "<br><br>");
+        */
+
+        //Assignment Operators with shorthand Arithmetic operators
+        var a = 10;
+        document.getElementById("shorth").innerHTML = a;
+        document.getElementById("shorth1").innerHTML = a += 10 ; //a = a + 10
+        document.getElementById("shorth2").innerHTML = a -= 10 ; //a = a - 10;
+        document.getElementById("shorth3").innerHTML = a /= 2 ; //a = a / 2;
+        document.getElementById("shorth4").innerHTML = a *= 2 ; // a = a * 2;
+        document.getElementById("shorth5").innerHTML = a %= 2 ; // a = a % 2;
+
+        
+        //Increment and Decrement Operators
+        poinc = 10;
+        document.getElementById("postinc").innerHTML = poinc++;
+        document.getElementById("postinc").innerHTML = poinc;
+
+        preinc = 10;
+        document.getElementById("preinc").innerHTML = ++preinc;
+
+        postdec = 10;
+        document.getElementById("postdec").innerHTML = postdec--;
+        document.getElementById("postdec").innerHTML = postdec;
+
+        predec =10;
+        document.getElementById("predec").innerHTML = --predec;
+
+        //new & delete operators
+        var carObj = new Object();
+        carObj.color = "Blue";
+        carObj.price = "18L";
+        document.getElementById("carObj").innerHTML = carObj.color;
+        document.getElementById("carObj1").innerHTML = carObj.price;
+
+        delete carObj.price;
+        document.getElementById("carObj1").innerHTML = carObj.price + " property_deleted";
+
+        /* var car = new Object();
+        car.color = "red";
+        document.write(car.color);
+        document.write("<br>");
+        car.num = 2;
+        document.write(car.num);
+        document.write("<br>");
+        
+        delete car.num;
+        document.write(car.num); */
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Functions</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        function h(){
+            document.write("h", "<br>");
+        }
+
+        function g(){
+            document.write("g", "<br>");
+            h();
+        }
+
+        function f(){
+            document.write("f", "<br>");
+            g()
+        }
+
+        f();
+    </script>
+</body>
+</html>
